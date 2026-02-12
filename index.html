@@ -2,11 +2,38 @@
 <html>
   <head>
     <title>Electron Auto Update</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 30px;
+      }
+
+      h1 {
+        margin-bottom: 10px;
+      }
+
+      #status {
+        font-size: 18px;
+        margin-top: 15px;
+      }
+
+      #restartBtn {
+        margin-top: 20px;
+        padding: 12px 18px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
   </head>
+
   <body>
-    <h1>🚀 Electron Auto Update App v1</h1>
+    <h1>🚀 Electron Auto Update App</h1>
+
     <p id="status">Checking for updates...</p>
-    <button id="restartBtn" style="display:none;">Restart & Update</button>
+
+    <button id="restartBtn" style="display: none">
+      Restart & Update
+    </button>
 
     <script src="./renderer.js"></script>
   </body>
