@@ -1,0 +1,31 @@
+{
+  "name": "my-electron-app",
+  "version": "1.0.1",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "com.akshay.electronapp",
+    "productName": "AkshayElectronApp",
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "akshayvaghasiyaprolink-hue",
+        "repo": "git+https://github.com/akshayvaghasiyaprolink-hue/update_electron.git"
+      }
+    ],
+    "win": {
+      "target": "nsis"
+    }
+  },
+  "devDependencies": {
+     "electron": "^40.4.0",
+    "electron-builder": "^26.7.0"
+  },
+  "dependencies": {
+ "dotenv": "^17.2.4",
+    "electron-updater": "^6.7.3"
+  }
+}
