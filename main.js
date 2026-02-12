@@ -2,14 +2,21 @@ const { app, BrowserWindow, ipcMain } = require("electron");
 const path = require("path");
 const log = require("electron-log");
 const { autoUpdater } = require("electron-updater");
-
+require('dotenv').config();
 let mainWindow;
+
+
 
 // ✅ Logging setup
 log.transports.file.level = "info";
 autoUpdater.logger = log;
 autoUpdater.autoDownload = true;
 autoUpdater.autoInstallOnAppQuit = true;
+
+// 👇 GitHub private repo access token
+autoUpdater.requestHeaders = {
+  Authorization: `token ${process.env.GITHUB_TOKEN}`,
+};
 
 // ✅ Fix for Squirrel Startup Events (without installing electron-squirrel-startup)
 if (process.platform === "win32") {
