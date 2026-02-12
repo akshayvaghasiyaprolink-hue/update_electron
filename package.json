@@ -1,6 +1,6 @@
 {
   "name": "my-electron-app",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
@@ -13,7 +13,7 @@
       {
         "provider": "github",
         "owner": "akshayvaghasiyaprolink-hue",
-        "repo": "git+https://github.com/akshayvaghasiyaprolink-hue/update_electron.git"
+        "repo": "update_electron"
       }
     ],
     "win": {
