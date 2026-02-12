@@ -1,10 +1,10 @@
 {
   "name": "my-electron-app",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "build": "electron-builder"
+    "build": "electron-builder --publish always"
   },
   "build": {
     "appId": "com.akshay.electronapp",
@@ -13,7 +13,8 @@
       {
         "provider": "github",
         "owner": "akshayvaghasiyaprolink-hue",
-        "repo": "update_electron"
+        "repo": "update_electron",
+        "releaseType": "release"
       }
     ],
     "win": {
